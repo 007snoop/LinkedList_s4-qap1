@@ -3,9 +3,10 @@ package LinkedList;
 import java.util.LinkedList;
 
 public class SingleLinkedListTest extends SingleLinkedList {
-    public Node head;
+    // i updated this class to extend the list class, removing redefining variables
+  /*  public Node head;
     public Node tail;
-    public int size;
+    public int size;*/
 
     public Node createSingleLinkedlist(int nodeValue){
         Node node = new Node();
@@ -77,7 +78,7 @@ public class SingleLinkedListTest extends SingleLinkedList {
                 tempNode = tempNode.next;
             }
         }
-        System.out.print("Node not found");
+        System.out.print("Node " + nodeValue + " not found");
         return false;
     }
 
@@ -94,7 +95,7 @@ public class SingleLinkedListTest extends SingleLinkedList {
         } else {
             Node curr = head;
             // for loop to go point to the node before the one to delete
-            for (int i = 0; i < pos; i++) {
+            for (int i = 0; i < pos - 1; i++) { // went too far, had to add -1 to position for correct output
                 curr = curr.next;
             }
             // curr is now at pos 1, remove node by skipping

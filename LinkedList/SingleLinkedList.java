@@ -23,6 +23,7 @@ public class SingleLinkedList {
 
         if (head == null){
             createSingleLinkedlist(nodeValue);
+            return; // add jump out return to update properly
         } else if (location == 0) {
             node.next = head;
             head = node;
@@ -42,7 +43,7 @@ public class SingleLinkedList {
             tempNode.next = node;
             node.next = nextNode;
         }
-
+    size++; // missing size update to feed back correct output
     }
 
     public void delete(int pos) {

@@ -15,5 +15,10 @@ public class Main {
         sll.traverseLinkedList();
         sll.searchNode(5);
 
+        sll.insertLinkedList(5, 4);
+        System.out.println("\nsearch test again");
+        sll.searchNode(5);
+        System.out.println("list printout after find");
+        sll.traverseLinkedList();
     }
 }
